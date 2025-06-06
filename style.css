@@ -19,7 +19,6 @@ nav ul {
   padding: 0;
   display: flex;
   gap: 15px;
-  flex-wrap: wrap;
 }
 nav ul li a {
   color: #fff;
@@ -46,9 +45,9 @@ section {
 }
 .video-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 10px;
-  flex-wrap: wrap;
 }
 .video-actions button {
   padding: 8px 12px;
@@ -56,6 +55,12 @@ section {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+.about, .contact, .interviews {
+  background: #fff;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
 }
 footer {
   background: #222;
