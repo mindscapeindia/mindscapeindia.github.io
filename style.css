@@ -1,79 +1,5 @@
-import zipfile
-import os
 
-# Create a temporary directory to store the files
-folder_name = "/mnt/data/mindscapeindia_homepage"
-os.makedirs(folder_name, exist_ok=True)
-
-# Write index.html
-index_html_content = """<!DOCTYPE html>
-<html lang="hi">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mindscape India</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Mindscape India</h1>
-    <nav>
-      <ul>
-        <li><a href="#">होम</a></li>
-        <li><a href="#">लेख</a></li>
-        <li><a href="#">पॉडकास्ट</a></li>
-        <li><a href="#">वीडियो</a></li>
-        <li><a href="#">हमारे बारे में</a></li>
-        <li><a href="#">संपर्क करें</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="top-stories">
-    <h2>मुख्य लेख</h2>
-    <div class="article">
-      <h3>कुवैत का काला कानून</h3>
-      <p>यह कहानी मुस्लिम महिलाओं के अधिकारों और कानूनों के टकराव की गहराई में जाती है।</p>
-    </div>
-    <div class="article">
-      <h3>बर्मिंघम: एक शहर, दो जहान</h3>
-      <p>इंग्लैंड में इस्लामीकरण और आधुनिकता के बीच का टकराव।</p>
-    </div>
-  </section>
-
-  <section class="videos">
-    <h2>Mindscape Videos</h2>
-    <div class="video-box">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/WXfxr2nfFfY?si=R0NZkUxCpbWBxn4N" frameborder="0" allowfullscreen></iframe>
-      <div class="video-actions">
-        <button>👍 Like</button>
-        <button>💬 Comment</button>
-        <button>🔗 Share</button>
-        <button>🔔 Subscribe</button>
-      </div>
-    </div>
-    <div class="video-box">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/Fq7YzN-lWoY?si=1B_Pp3KtIdB8QvUr" frameborder="0" allowfullscreen></iframe>
-      <div class="video-actions">
-        <button>👍 Like</button>
-        <button>💬 Comment</button>
-        <button>🔗 Share</button>
-        <button>🔔 Subscribe</button>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Mindscape India | सोच की कोई सीमा नहीं</p>
-  </footer>
-</body>
-</html>"""
-
-with open(os.path.join(folder_name, "index.html"), "w", encoding="utf-8") as f:
-    f.write(index_html_content)
-
-# Write style.css
-style_css_content = """body {
+body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -93,6 +19,7 @@ nav ul {
   padding: 0;
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
 }
 nav ul li a {
   color: #fff;
@@ -121,6 +48,7 @@ section {
   display: flex;
   gap: 10px;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 .video-actions button {
   padding: 8px 12px;
@@ -135,15 +63,4 @@ footer {
   text-align: center;
   padding: 15px;
   margin-top: 30px;
-}"""
-
-with open(os.path.join(folder_name, "style.css"), "w", encoding="utf-8") as f:
-    f.write(style_css_content)
-
-# Create the zip file
-zip_path = "/mnt/data/mindscape_home_update.zip"
-with zipfile.ZipFile(zip_path, 'w') as zipf:
-    zipf.write(os.path.join(folder_name, "index.html"), arcname="index.html")
-    zipf.write(os.path.join(folder_name, "style.css"), arcname="style.css")
-
-zip_path
+}
