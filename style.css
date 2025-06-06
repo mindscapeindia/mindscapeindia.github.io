@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f8f8f8;
+  background: #f4f4f4;
   color: #333;
 }
 header {
@@ -27,17 +27,24 @@ nav ul li a {
 section {
   padding: 20px;
 }
-.top-stories .article {
+.article {
   background: #fff;
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-.videos {
-  margin-top: 40px;
+.podcasts, .about-contact {
   background: #fff;
   padding: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.videos {
+  background: #fff;
+  padding: 20px;
+  margin-top: 30px;
   border-radius: 8px;
 }
 .video-box {
@@ -56,16 +63,15 @@ section {
   border-radius: 5px;
   cursor: pointer;
 }
-.about, .contact, .interviews {
-  background: #fff;
-  padding: 15px;
-  margin-top: 20px;
-  border-radius: 8px;
+.about-contact {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
 }
 footer {
   background: #222;
   color: #fff;
   text-align: center;
   padding: 15px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
