@@ -16,15 +16,3 @@ header {
 main {
     padding: 2rem;
 }
-.author {
-    font-size: 1rem;
-    color: #555;
-}
-ul {
-    margin-left: 1.5rem;
-}
-.end {
-    margin-top: 2rem;
-    font-weight: bold;
-    color: #c00;
-}
