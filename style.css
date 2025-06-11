@@ -1,77 +1,30 @@
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f4f4;
-  color: #333;
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    background-color: #fffbe7;
+    color: #222;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 header {
-  background: #222;
-  color: #fff;
-  padding: 20px;
+    background-color: #ffefc1;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
 }
-header h1 {
-  margin: 0;
+main {
+    padding: 2rem;
 }
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 15px;
+.author {
+    font-size: 1rem;
+    color: #555;
 }
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
+ul {
+    margin-left: 1.5rem;
 }
-section {
-  padding: 20px;
-}
-.article {
-  background: #fff;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.podcasts, .about-contact {
-  background: #fff;
-  padding: 20px;
-  margin-top: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.videos {
-  background: #fff;
-  padding: 20px;
-  margin-top: 30px;
-  border-radius: 8px;
-}
-.video-box {
-  margin-bottom: 30px;
-}
-.video-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
-.video-actions button {
-  padding: 8px 12px;
-  background: #eee;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.about-contact {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-}
-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
+.end {
+    margin-top: 2rem;
+    font-weight: bold;
+    color: #c00;
 }
